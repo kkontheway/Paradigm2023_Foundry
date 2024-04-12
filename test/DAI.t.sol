@@ -9,12 +9,13 @@ import {Account as Acct} from "../src/5.DAI/Account.sol";
 import "../src/5.DAI/Challenge.sol";
 
 contract DAITest is Test {
-    string public MAINNET_RPC_URL = "https://eth-mainnet.g.alchemy.com/v2/TfzGdaUaUjh1Yu1mPXyV0HxmlYzq2Nst";
     Challenge challenge;
     AccountManager manager;
     SystemConfiguration configuration;
 
     function setUp() public {
+        string memory key = "MAINNET_RPC_URL";
+        string memory MAINNET_RPC_URL = vm.envString(key);
         uint256 forkId = vm.createFork(MAINNET_RPC_URL, 16_543_210);
         vm.selectFork(forkId);
 

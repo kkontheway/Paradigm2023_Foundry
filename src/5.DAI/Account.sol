@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity ^0.8.13;
 
-import "@clones-with-immutable-args/src/Clone.sol";
-import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
-import "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
+import "../../lib/clones-with-immutable-args/src/Clone.sol";
+import "../../lib/chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import "../../lib/openzeppelin-contracts/contracts/utils/cryptography/SignatureChecker.sol";
 
 import "./SystemConfiguration.sol";
 import "./AccountManager.sol";
